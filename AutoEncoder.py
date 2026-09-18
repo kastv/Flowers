@@ -156,7 +156,7 @@ def learn_thread():
         print(f'e:{epoch} gen_err: {gen_score_error:.4} n:{noice:.4}')
         epoch += 1
         while draw:pass
-        if epoch%10==0:
+        if epoch%100==0:
             if not os.path.exists('models'):
                 os.mkdir('models')
             torch.save(model.state_dict(),f'models/torch_e{epoch}')
